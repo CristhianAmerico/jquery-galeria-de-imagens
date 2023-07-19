@@ -1,0 +1,112 @@
+*{
+    /*Tag reset*/
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    /*estilizando cabeçalho*/
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: #fff;
+    /*alinhando itens lado a lado*/
+    display: flex;
+    /*adicionando faixa azul escura no bottom*/
+    border-bottom: 16px solid #341f97;
+    /*alinhando itens ao centro*/
+    justify-content: center;
+    /*transformando todas as letras em maiusculas e em italico*/
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button{
+    /*separando os botoes do input*/
+    margin-left: 16px;
+}
+
+form{
+    /*estilizando o form*/
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    /*alinhando textos ao centro*/
+    text-align: center;
+    /*tornado invisivel*/
+    display: none;
+}
+
+form h2{
+    /*descolando o h2 do input e dos buttons*/
+    margin-bottom: 16px;
+}
+
+input, button{
+    /*estilizando os buttons e o input*/
+    padding: 8px;
+}
+
+button{
+    /*estilizando o button*/
+    background-color: #009432;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+#botao-cancelar{
+    background-color: red;
+}
+
+ul{
+    /*estilizando a lista*/
+    display: flex;
+    flex-wrap: wrap
+}
+
+ul li{
+    /*estilizando elementos da lista*/
+    list-style: none;
+    /*divindo numero de itens por linha, no caso 4*/
+    max-width: 25%;
+    /*para que funcione o position absolute do overlay, é preciso que o elemento pai esteva com o positon relative*/
+    position: relative;
+    /*limitando a altura dos li*/
+    max-height: 280px;
+    /*cortando todo o elemento q utrapassar o 280px*/
+    /*esconda todo conteudo que ultrapassar em y*/
+    overflow-y: hidden;
+}
+
+ul li img{
+    /*estilizando img da lista*/
+    width: 100%;
+}
+
+.overlay-imagem-link{
+    /*esilizando overlay(sobreposicao) dos links */
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /*posicionando o link no canto inferior direito*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*ocutando link*/
+    opacity: 0;
+    /*adicionando transiçao e tempo de aparicao do link*/
+    transition: all ease .5s;
+}
+.overlay-imagem-link a{
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link{
+    /*aparecer o link quando passado o mouse na li*/
+    opacity: 1;
+}
